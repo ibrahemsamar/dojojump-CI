@@ -3,13 +3,13 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('chandra-dockerhub')
-		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-  		AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+		DOCKERHUB_CREDENTIALS=credentials('samarHACATHONSDACODINGDOJO')
+		AWS_ACCESS_KEY_ID     = credentials('AccessKeyID')
+  		AWS_SECRET_ACCESS_KEY = credentials('SecretAccessKey')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
-		AWS_S3_BUCKET = 'online-dojojump-docker-cicd'
-		AWS_EB_APP_NAME = 'online-dojojump-cicd'
-        AWS_EB_ENVIRONMENT_NAME = 'Onlinedojojumpcicd-env'
+		AWS_S3_BUCKET = 'hacathonbucket'
+		AWS_EB_APP_NAME = 'hacathon-application'
+        AWS_EB_ENVIRONMENT_NAME = 'Hacathonapplication-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
 	}
 
